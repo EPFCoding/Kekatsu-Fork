@@ -1,191 +1,191 @@
 msgid "Ok"
-msgstr "Ok"
+msgstr "Aceptar"
 
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "Cancelar"
 
 msgid "Yes"
-msgstr "Ja"
+msgstr "Sí"
 
 msgid "No"
-msgstr "Nee"
+msgstr "No"
 
 msgid "Browse"
-msgstr "Bladeren"
+msgstr "Explorar"
 
 msgid "Search by title"
-msgstr "Zoek op titel"
+msgstr "Buscar por título"
 
 msgid "Browse all"
-msgstr "Blader alle"
+msgstr "Ver todos"
 
 msgid "No database loaded or initialized"
-msgstr "Geen database geladen of geïnitialiseerd"
+msgstr "¡Base de datos no encontrada!"
 
 msgid "Page"
-msgstr "Pagina"
+msgstr "Pagína"
 
 msgid "Previous"
-msgstr "Vorige"
+msgstr "Anterior"
 
 msgid "Next"
-msgstr "Volgende"
+msgstr "Siguiente"
 
 msgid "Platform"
-msgstr "Platform"
+msgstr "Plataforma"
 
 msgid "Region"
-msgstr "Regio"
+msgstr "Región"
 
 msgid "Author"
-msgstr "Auteur"
+msgstr "Autor"
 
 msgid "Version"
-msgstr "Versie"
+msgstr "Versión"
 
 msgid "Download"
-msgstr "Downloaden"
+msgstr "Descargar"
 
 msgid "Error"
-msgstr "Fout"
+msgstr "Error"
 
 msgid "Info"
-msgstr "Info"
+msgstr "Información"
 
 msgid "Prompt"
-msgstr "Prompt"
+msgstr "Mensaje"
 
 msgid "Download failed"
-msgstr "Download mislukt"
+msgstr "¡Descarga fallida!"
 
 msgid "could not create download directory"
-msgstr "kon geen downloadmap aanmaken"
+msgstr "no se pudo crear la carpeta de descargas"
 
 msgid "bad response status"
-msgstr "foute responsstatus"
+msgstr "respuesta malformada desde servidor"
 
 msgid "could not initialize download"
-msgstr "kon download niet initialiseren"
+msgstr "no se pudo iniciar la descarga"
 
 msgid "could not create file"
-msgstr "kon geen bestand aanmaken"
+msgstr "no se pudo crear el archivo"
 
 msgid "could not perform download"
-msgstr "kon geen download uitvoeren"
+msgstr "no se pudo descargar"
 
 msgid "Download completed"
-msgstr "Download voltooid"
+msgstr "Descarga completa."
 
 msgid "Extracting content..."
-msgstr "Inhoud uitpakken..."
+msgstr "Extrayendo..."
 
 msgid "Extraction failed"
-msgstr "Uitpakken mislukt"
+msgstr "Extracción fallida."
 
 msgid "could not open file"
 msgstr "Kon bestand niet openen"
 
 msgid "could not locate file"
-msgstr "Kon bestand niet vinden"
+msgstr "no se pudo localizar el archivo."
 
 msgid "could not read file"
-msgstr "Kon bestand niet lezen"
+msgstr "no se puede leer el archivo"
 
 msgid "could not write file"
-msgstr "Kon bestand niet schrijven"
+msgstr "no se pudo escribir el archivo."
 
 msgid "Do you wish to extract the content in a separate directory?"
-msgstr "Wil je de inhoud in een aparte map uitpakken?"
+msgstr "¿Deseas extraer el contenido en una carpeta separada?"
 
 msgid "Failed to initialize database"
-msgstr "Kon database niet initialiseren"
+msgstr "Fallo al iniciar base de datos."
 
 msgid "download failed"
-msgstr "download mislukt"
+msgstr "descarga fallida"
 
 msgid "file not found"
-msgstr "bestand niet gevonden"
+msgstr "archivo no encontrado"
 
 msgid "Database open failed"
-msgstr "Kon database niet openen"
+msgstr "Fallo al abrir base de datos."
 
 msgid "invalid version"
-msgstr "Ongeldige versie"
+msgstr "¡Versión invalida!"
 
 msgid "invalid format"
-msgstr "Ongeldig formaat"
+msgstr "Formato incorrecto"
 
 msgid "Database loaded successfully"
-msgstr "Database geladen"
+msgstr "Base de datos cargada satisfactoriamente."
 
 msgid "entries"
-msgstr "items"
+msgstr "entradas"
 
 msgid "Databases"
-msgstr "Databases"
+msgstr "Base de datos"
 
 msgid "No databases found"
-msgstr "Geen databases gevonden"
+msgstr "No se encontraron bases de datos."
 
 msgid "Loading database..."
-msgstr "Database aan het laden..."
+msgstr "Cargando base de datos..."
 
 msgid "Settings"
-msgstr "Instellingen"
+msgstr "Configuración"
 
 msgid "Downloads directory"
-msgstr "Downloads-map"
+msgstr "Carpeta de descargas"
 
 msgid "Use platform-specific directories (E.g. nds, gba)"
-msgstr "Gebruik platformspecifieke mappen (bijv. nds, gba)"
+msgstr "Use carpetas con una plataforma específica (E.g. nds, gba)"
 
 msgid "Color scheme"
-msgstr "Kleurenschema"
+msgstr "Tema"
 
 msgid "Check for updates on start"
-msgstr "Controleer op updates bij het starten"
+msgstr "Verificar actualizaciones al iniciar"
 
 msgid "Language"
-msgstr "Taal"
+msgstr "Idioma"
 
 msgid "Path can not be empty"
-msgstr "Pad mag niet leeg zijn"
+msgstr "La carpeta no puede estar vacía."
 
 msgid "Directory does not exist. Do you want to create it?"
-msgstr "Map bestaat niet. Wil je het aanmaken?"
+msgstr "La carpeta no existe, ¿Quieres crear una?"
 
 msgid "Failed to create directory"
-msgstr "Kon map niet aanmaken"
+msgstr "Fallo al crear carpeta."
 
 msgid "Italian"
-msgstr "Italiaans"
+msgstr "Italiano"
 
 msgid "Dutch"
-msgstr "Nederlands"
+msgstr "Español"
 
 msgid "Check for updates"
-msgstr "Controleer op updates"
+msgstr "Buscar actualizaciones"
 
 msgid "Could not download update"
-msgstr "Kon update niet downloaden"
+msgstr "No se pudo descargar la actualización"
 
 msgid "Extracting update files..."
-msgstr "Update bestanden uitpakken..."
+msgstr "Extrayendo actualización..."
 
 msgid "Could not extract update files"
-msgstr "Kon update bestanden niet uitpakken"
+msgstr "La actualización no se pudo extraer"
 
 msgid "Update downloaded successfully. Do you want to reboot now?"
-msgstr "Update gedownload. Wil je nu herstarten?"
+msgstr "Actualización completa! ¿Reiniciar ahora?"
 
 msgid "Checking for updates..."
-msgstr "Updates controleren..."
+msgstr "Buscando actualizaciones..."
 
 msgid "New version found"
-msgstr "Nieuwe versie gevonden"
+msgstr "Nueva versión encontrada!"
 
 msgid "Update"
-msgstr "Update"
+msgstr "Actualizar"
 
 msgid "Ignore"
-msgstr "Negeer"
+msgstr "Ignorar"

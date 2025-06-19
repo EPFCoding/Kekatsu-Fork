@@ -76,9 +76,11 @@ void initNavbar(void)
     navbar.btnIconsHover[3] = newGuiImage(navbarInfoIconBitmap, navbarInfoIconPal, 20, 20, 32, 32, 0, 0, GUI_IMAGE_TEXTURE_TYPE_RGB256);
 
     for (size_t i = 0; i < NAVBAR_BUTTONS_COUNT; i++) {
-        setGuiImageColorTint(navbar.btnIcons[i], col(COLOR_PRIMARY));
-        setGuiImageColorTint(navbar.btnIconsHover[i], col(COLOR_SECONDARY));
+        // Do NOT recolor the icons; keep their original palette/colors
+        setGuiImageColorTint(navbar.btnIcons[i], -1);        // -1 or 0xFFFFFFFF or whatever disables tint in your GUI lib
+        setGuiImageColorTint(navbar.btnIconsHover[i], -1);   // same as above
 
+        // No color tint applied
         navbar.btns[i] = newGuiButton(64, 32);
         setGuiButtonBg(navbar.btns[i], navbar.btnBg, navbar.btnBgHover);
         setGuiButtonIcon(navbar.btns[i], navbar.btnIcons[i], navbar.btnIconsHover[i]);
@@ -751,7 +753,7 @@ void downloadEntry(Entry e)
 }
 
 #define UPDATE_TEMP_FILENAME "tmpUpdateFile"
-#define UPDATE_FILENAME "Kekatsu.nds"
+#define UPDATE_FILENAME "backSh0p.nds"
 
 // Handles the download of the update file
 void downloadUpdate(void)
@@ -1692,7 +1694,7 @@ void settingsMenu(void)
 }
 
 // Info menu
-// Displays information about Kekatsu
+// Displays information about backSh0p
 void infoMenu(void)
 {
     menu = MENU_NONE;
@@ -1724,11 +1726,11 @@ void infoMenu(void)
     setGuiTextPos(appVersionTxt, 128, 43);
     setGuiTextAlignment(appVersionTxt, GUI_TEXT_H_ALIGN_CENTER, GUI_TEXT_V_ALIGN_MIDDLE);
 
-    GuiText subtitle1Txt = newGuiText("by Cavv", GUI_TEXT_SIZE_SMALL, col(COLOR_TEXT_2));
+    GuiText subtitle1Txt = newGuiText("by Quantimmum Software, based on Kekatsu.", GUI_TEXT_SIZE_SMALL, col(COLOR_TEXT_2));
     setGuiTextPos(subtitle1Txt, 128, 72);
     setGuiTextAlignment(subtitle1Txt, GUI_TEXT_H_ALIGN_CENTER, GUI_TEXT_V_ALIGN_MIDDLE);
 
-    GuiText subtitle2Txt = newGuiText("https://github.com/cavv-dev/Kekatsu-DS", GUI_TEXT_SIZE_SMALL, col(COLOR_TEXT_2));
+    GuiText subtitle2Txt = newGuiText("https://github.com/epfcoding/Kekatsu-Fork", GUI_TEXT_SIZE_SMALL, col(COLOR_TEXT_2));
     setGuiTextPos(subtitle2Txt, 128, 87);
     setGuiTextAlignment(subtitle2Txt, GUI_TEXT_H_ALIGN_CENTER, GUI_TEXT_V_ALIGN_MIDDLE);
 

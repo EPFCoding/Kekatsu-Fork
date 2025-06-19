@@ -6,11 +6,12 @@ endif
 
 include $(DEVKITARM)/ds_rules
 
-TARGET := Kekatsu
+TARGET := backSh0p
 BUILD := build
 RELEASE := release
 SOURCES := source source/utils source/gui
 DATA := data
+DATAFILES := $(wildcard $(DATA)/*)
 INCLUDES := include
 GRAPHICS := source/gfx source/gui/gfx
 LANGUAGES := source/lang
@@ -28,9 +29,9 @@ ifneq ($(BUILDDIR), $(CURDIR))
 
 export OUTPUT := $(CURDIR)/$(TARGET)
 export VPATH := $(foreach dir,$(SOURCES),$(CURDIR)/$(dir)) \
-				$(foreach dir,$(DATA),$(CURDIR)/$(dir)) \
-				$(foreach dir,$(GRAPHICS),$(CURDIR)/$(dir)) \
-				$(foreach dir,$(LANGUAGES),$(CURDIR)/$(dir))
+                $(foreach dir,$(DATA),$(CURDIR)/$(dir)) \
+                $(foreach dir,$(GRAPHICS),$(CURDIR)/$(dir)) \
+                $(foreach dir,$(LANGUAGES),$(CURDIR)/$(dir))
 export DEPSDIR := $(CURDIR)/$(BUILD)
 
 CFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.c)))
@@ -50,13 +51,12 @@ export OFILES_SOURCES := $(CPPFILES:.cpp=.o) $(CFILES:.c=.o) $(SFILES:.s=.o)
 export OFILES := $(PNGFILES:.png=.o) $(OFILES_LANG) $(OFILES_SOURCES)
 export HFILES := $(PNGFILES:.png=.h) $(addsuffix .h,$(subst .,_,$(LANGFILES)))
 export INCLUDE := $(foreach dir,$(INCLUDES),-iquote $(CURDIR)/$(dir)) \
-				$(foreach dir,$(LIBDIRS),-I$(dir)/include) \
-				-I$(CURDIR)/$(BUILD)
+                $(foreach dir,$(LIBDIRS),-I$(dir)/include) \
+                -I$(CURDIR)/$(BUILD)
 export LIBPATHS := $(foreach dir,$(LIBDIRS),-L$(dir)/lib)
 
-export GAME_TITLE := Kekatsu
-export GAME_SUBTITLE1 := DS(i) content downloader
-export GAME_SUBTITLE2 := Cavv
+export GAME_TITLE := backSh0p
+export GAME_SUBTITLE1 := Quantimmum Software Inc.
 export GAME_ICON := $(CURDIR)/icon.bmp
 
 .PHONY: $(BUILD) clean
@@ -87,6 +87,9 @@ $(OUTPUT).elf: $(OFILES)
 %.lang.o %_lang.h : %.lang
 	@echo $(notdir $<)
 	@$(bin2o)
+
+# Copy data files (like bgm.wav) to the .nds NitroFS image
+$(OUTPUT).nds: $(DATAFILES)
 
 -include $(DEPENDS)
 
