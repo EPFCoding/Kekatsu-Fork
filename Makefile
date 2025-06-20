@@ -22,7 +22,7 @@ CFLAGS := -g -Wall -O2 -ffunction-sections -fdata-sections $(ARCH) $(INCLUDE) -D
 CXXFLAGS := $(CFLAGS) -fno-rtti -fno-exceptions
 ASFLAGS := -g $(ARCH)
 LDFLAGS := -specs=ds_arm9.specs -g $(ARCH) -Wl,-Map,$(notdir $*.map)
-LIBS := -lminizip -lcurl -lmbedtls -lmbedcrypto -lmbedx509 -lpng -lm -lz -ldswifi9 -lfat -lnds9
+LIBS := -lminizip -lcurl -lmbedtls -lmbedcrypto -lmbedx509 -lpng -lm -lz -ldswifi9 -lfat -lmm9 -lnds9
 LIBDIRS := $(PORTLIBS) $(LIBNDS)
 
 ifneq ($(BUILDDIR), $(CURDIR))
@@ -39,6 +39,7 @@ CPPFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.cpp)))
 SFILES := $(foreach dir,$(SOURCES),$(notdir $(wildcard $(dir)/*.s)))
 PNGFILES := $(foreach dir,$(GRAPHICS),$(notdir $(wildcard $(dir)/*.png)))
 LANGFILES := $(foreach dir,$(LANGUAGES),$(notdir $(wildcard $(dir)/*.lang*)))
+OBJS += soundbank.o
 
 ifeq ($(strip $(CPPFILES)),)
 export LD := $(CC)
@@ -56,7 +57,8 @@ export INCLUDE := $(foreach dir,$(INCLUDES),-iquote $(CURDIR)/$(dir)) \
 export LIBPATHS := $(foreach dir,$(LIBDIRS),-L$(dir)/lib)
 
 export GAME_TITLE := backSh0p
-export GAME_SUBTITLE1 := Quantimmum Software Inc.
+export GAME_SUBTITLE1 := DS Software Downloader.
+export GAME_SUBTITLE2 := Quantimmum Software Inc.
 export GAME_ICON := $(CURDIR)/icon.bmp
 
 .PHONY: $(BUILD) clean

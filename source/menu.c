@@ -76,10 +76,6 @@ void initNavbar(void)
     navbar.btnIconsHover[3] = newGuiImage(navbarInfoIconBitmap, navbarInfoIconPal, 20, 20, 32, 32, 0, 0, GUI_IMAGE_TEXTURE_TYPE_RGB256);
 
     for (size_t i = 0; i < NAVBAR_BUTTONS_COUNT; i++) {
-        // Do NOT recolor the icons; keep their original palette/colors
-        setGuiImageColorTint(navbar.btnIcons[i], -1);        // -1 or 0xFFFFFFFF or whatever disables tint in your GUI lib
-        setGuiImageColorTint(navbar.btnIconsHover[i], -1);   // same as above
-
         // No color tint applied
         navbar.btns[i] = newGuiButton(64, 32);
         setGuiButtonBg(navbar.btns[i], navbar.btnBg, navbar.btnBgHover);
